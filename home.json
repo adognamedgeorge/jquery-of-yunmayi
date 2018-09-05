@@ -1,0 +1,70 @@
+{
+  "ret":true,
+  "data":{
+    "account": {
+      "balance": 0,
+      "integral": 0
+    },
+    "couponNum": 0,
+    "cartNum": 12,
+    "user": {
+      "id": "100673",
+      "name": "maijia"
+    },
+    "category": [
+      {
+        "name": "酒水饮料",
+        "id": 1051,
+        "items": [
+          {"name":  "啤酒",  "id": 1053 },
+          {"name":  "白酒",  "id": 1054 }
+        ]
+      },
+      {
+        "name": "酒饮料",
+        "id": 1052,
+        "items": [
+          {"name":  "啤酒",  "id": 1053 },
+          {"name":  "白酒",  "id": 1054 }
+        ]
+      }
+    ],
+
+    "posterlist": [{
+      "img": "http://p1.music.126.net/CEznnRcRcLpen07YSbMD3g==/109951163517815037.jpg",
+      "link": "http://pifa.yunmayi.com/notice/detail?id=168",
+      "sort": 0
+    },{
+      "img": "http://p1.music.126.net/3ovn332Vy0MsvA3Q8kWvOw==/109951163515911854.jpg",
+      "link": "http://pifa.yunmayi.com/notice/detail?id=169",
+      "sort": 1
+    }],
+
+    "recommend": [{
+      "name": "限时特价",
+      "products": [
+        {
+          "id": "110974",
+          "stock": "100",
+          "img": "/upload/eba1c2ef98775bf4431d2ebd472eab51.jpg",
+          "title": "五常昌旺纯真100%稻花香",
+          "spec": "10kg/袋",
+          "unit": "袋",
+          "price": "105.50",
+          "minSoldNum": "3",
+          "isCollect": 0
+        },{
+          "id": "110975",
+          "stock": "100",
+          "img": "/upload/eba1c2ef98775bf4431d2ebd472eab51.jpg",
+          "title": "五常昌旺纯真100%稻花香",
+          "spec": "10kg/袋",
+          "unit": "袋",
+          "price": "105.50",
+          "minSoldNum": "3",
+          "isCollect": 0
+        }
+      ]
+    }]
+  }
+}

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页-云蚂蚁批发平台</title>
+    <link href="scss/home.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="img/favicon.ico" rel="shortcut icon"/>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/yunpc.js"></script>
+</head>
+<body>
+<!--头部-->
+<div id="header">
+    <div class="wrapper">
+        <p class="h-left">
+            <a href="">云蚂蚁官网</a>Hi,<a href="" class="user_name active">用户1234</a><a href="">退出</a>
+        </p>
+
+        <div class="h-right">
+            <ul>
+                <li><a href="">批发首页</a></li>
+                <li><a href="">会员中心</a></li>
+                <li><a href="">当面付申请</a></li>
+                <li><a href="">快递代收</a></li>
+                <li><a href="">进货单</a></li>
+                <li><a href="">收藏夹</a></li>
+                <li><a href="">帮助中心</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--搜索栏-->
+<div id="search">
+    <div class="wrapper">
+        <div class="box">
+
+            <div class="search_logo">
+                <main>
+                    <a class="logo_img" href=""><img src="http://pifa.yunmayi.com/statics/images/new_log.png" title="云蚂蚁www.yunmayi.com"/></a>
+                    <a class="logo_font" href=""><img src="http://pifa.yunmayi.com/statics/images/index/04171124.png" title="云蚂蚁批发平台"/></a>
+                </main>
+            </div>
+
+            <div class="search_form">
+                <input type="text" placeholder="搜索商品关键字，品牌"/>
+                <button type="submit">搜索</button>
+            </div>
+
+            <div class="search_cart">
+                <span class="cart-p"><a class="cart-bg1" href=""> </a>进货单<i> </i></span>
+                <span class="cart-span">99</span>
+                <a class="cart-bg2" href=""> </a>
+
+                <div class="cart-hide">
+                    <h3>新加入的商品</h3>
+                    <ul>
+                        <li>
+                            <a class="ch-img" href=""><img src="./img/4.png"/></a>
+                            <div class="ch-content">
+                                <p class="ch-text"><a href="#">芝士印尼进口丽姿势姿势姿势姿势姿势</a></p>
+                                <div>
+                                    <a href="javascript:;">-</a>
+                                    <input type="text" value="8" data-min="0"/>
+                                    <a href="javascript:;">+</a>
+                                    <span>￥<strong>49.5</strong></span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>3</li>
+                    </ul>
+                    <div class="hide-footer">
+                        共计<span>￥<strong>198</strong></span>
+                        <a href="" target="_blank">去结算</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search_img">
+                <a href=""> <img src="./img/2.png" alt="云蚂蚁app二维码"/></a>
+            </div>
+        </div>
+
+        <div class="search_bar">
+            <h2>全部商品分类</h2>
+            <ul>
+                <li><a href="">首页</a></li>
+                <li v-for="item of cat" :key="item.id"><a href="">{{item.name}}</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--轮播页-->
+<div id="slider">
+    <div class="wrapper">
+        <div class="mulu">
+            <!--<h2>全部商品分类</h2>-->
+            <div class="list">
+                <ul>
+                    <li v-for="item of cat" :key="item.id">
+                        <div class="list-a">
+                            <a href="">{{item.name}}</a>
+                            <a href="" v-for="item2 of item['items']" :key="item2.id">{{item2.name}}</a>
+                        </div>
+
+                        <div class="mulu-hide">
+                            <p>{{item.name}}</p>
+                            <div>
+                                <a href="" v-for="item2 of item.items" :key="item2.id">{{item2.name}}</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--vue-awesome-swiper插件轮播-->
+        <div class="lunb">
+            <ul class="lunbo-img">
+                <li><a href=""><img src="./img/4.png"/></a></li>
+                <li><a href=""><img src="./img/3.png"/></a></li>
+            </ul>
+            <ul class="list-li"> </ul>
+        </div>
+
+        <div class="ads">
+            <div class="ad1">
+                <div class="ad1-img"><img src=""/></div>
+                <div class="ad1-text">
+                    <h3>Hi, <a href="" class="active">云蚂蚁1234</a></h3>
+                    <p>签到可领取200积分</p>
+                </div>
+                <button><a>签到</a></button>
+            </div>
+            <ul class="ads-ul">
+                <li><h3>1314.59</h3><a href="">余额</a></li>
+                <li><h3>4</h3><a href="">优惠券</a></li>
+                <li><h3>182310</h3><a href="">积分</a></li>
+            </ul>
+            <div class="ad2">
+                <ul>
+                    <li><a class="ad-bg1" href="">会员中心</a></li>
+                    <li><a class="ad-bg2" href="">领券中心</a></li>
+                    <li><a class="ad-bg3" href="">积分兑换</a></li>
+                </ul>
+            </div>
+            <div class="ad3">
+                <div class="ad-t">
+                    <h3>公告</h3>
+                    <a class="gengduo" href="">更多<i></i></a>
+                </div>
+                <div class="ad-b">
+                    <ul>
+                        <li><a href="">8月爆品预售来袭</a></li>
+                        <li><a href="">【通知】6月27日订单配送通知</a></li>
+                        <li><a href="">法丽兹系列调价通知</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--限时特价-->
+<div id="special" class="category">
+    <div class="wrapper">
+        <div class="sp-left">
+            <img src="./img/home_banner_discount@2x.png"/>
+        </div>
+        <div class="sp-slid">
+            <ul>
+                <li class="item-box">
+                    <a  href="javascript:;" class="item-bg cover"> </a>
+                    <div class="item-img">
+                        <a href="" target="_blank"><img src="http://i8.yunmayi.com/upload/2015/04/30/7b948795d28a540658f4fc6f6da26950.jpgXXXXX!!!!!_300x300.jpg"/></a>
+                    </div>
+                    <div class="item-title">
+                        <a href="" target="_blank">{{list.name}}</a>
+                    </div>
+                    <div class="item-price">
+                        <i>￥</i><strong>47.9</strong>/箱
+                        <span>规格:330ml*24瓶</span>
+                    </div>
+                    <div class="item-action">
+                        <a href="javascript:;">-</a>
+                        <input type="text" value="1" data-min="1"/>
+                        <a href="javascript:;">+</a>
+                        <a href="">进货</a>
+                    </div>
+                </li>
+                <li class="item-box">
+                    <a class="item-bg"> </a>
+                    <div class="item-img">
+                        <a href="" target="_blank"><img src="http://i8.yunmayi.com/upload/2015/04/30/7b948795d28a540658f4fc6f6da26950.jpgXXXXX!!!!!_300x300.jpg"/></a>
+                    </div>
+                    <div class="item-title">
+                        <a href="" target="_blank">百事可乐碳酸饮料汽水，夏天必备夏</a>
+                    </div>
+                    <div class="item-price">
+                        <i>￥</i><strong>47.9</strong>/箱
+                        <span>规格:330ml*24瓶</span>
+                    </div>
+                    <div class="item-action">
+                        <a href="javascript:;">-</a>
+                        <input type="text" value="1" data-min="1"/>
+                        <a href="javascript:;">+</a>
+                        <a href="">进货</a>
+                    </div>
+                </li>
+                <li class="item-box">
+                    <a class="item-bg"> </a>
+                    <div class="item-img">
+                        <a href="" target="_blank"><img src="http://i8.yunmayi.com/upload/2015/04/30/7b948795d28a540658f4fc6f6da26950.jpgXXXXX!!!!!_300x300.jpg"/></a>
+                    </div>
+                    <div class="item-title">
+                        <a href="" target="_blank">百事可乐碳酸饮料汽水，夏天必备夏</a>
+                    </div>
+                    <div class="item-price">
+                        <i>￥</i><strong>47.9</strong>/箱
+                        <span>规格:330ml*24瓶</span>
+                    </div>
+                    <div class="item-action">
+                        <a href="javascript:;">-</a>
+                        <input type="text" value="1" data-min="1"/>
+                        <a href="javascript:;">+</a>
+                        <a href="">进货</a>
+                    </div>
+                </li>
+            </ul>
+
+            <a href=""><div class="btn fl iconfont"><i>&#xe600;</i></div></a>
+            <a href=""><div class="btn fr iconfont"><i>&#xe600;</i></div></a>
+        </div>
+        <div class="sp-right">
+            <div class="r-img">
+                <a href=""><img src="http://i8.yunmayi.com/upload/2017/03/28/c7add6ce7033b01bfc9b399b4f34efd2.jpgXXXXX!!!!!_300x300.jpg"/></a>
+            </div>
+            <div class="r-title">
+            </div>
+        </div>
+    </div>
+</div>
+<!--商品展示-->
+<div id="categories">
+    <div class="wrapper">
+        <div id="c1" class="category">
+            <div class="c-left">
+                <div class="left-t">
+                    <div class="ca-title">
+                        <a href="">酒水饮料<i class="i-bg"> </i></a>
+                    </div>
+                    <div class="ca-list">
+                        <ul>
+                            <li><a href="">饮料</a></li>
+                            <li><a href="">果酒</a></li>
+                            <li><a href="">啤酒</a></li>
+                            <li><a href="">黄酒</a></li>
+                            <li><a href="">白酒</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="left-b">
+                    <img src="./img/home_banner_L1@2x.png"/>
+                </div>
+            </div>
+
+            <div class="c-right">
+                <ul>
+                    <li class="item-box">
+                        <a class="item-bg"> </a>
+                        <div class="item-img">
+                            <a href="" target="_blank"><img src="http://i8.yunmayi.com/upload/2015/04/30/7b948795d28a540658f4fc6f6da26950.jpgXXXXX!!!!!_300x300.jpg"/></a>
+                        </div>
+                        <div class="item-title">
+                            <a href="" target="_blank">百事可乐碳酸饮料汽水，夏天必备夏</a>
+                        </div>
+                        <div class="item-price">
+                            <i>￥</i><strong>47.9</strong>/箱
+                            <span>规格:330ml*24瓶</span>
+                        </div>
+                        <div class="item-action">
+                            <a href="javascript:;">-</a>
+                            <input type="text" value="1" data-min="1"/>
+                            <a href="javascript:;">+</a>
+                            <a href="">进货</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="line">
+    <div class="wrapper">
+        <div class="line-img-box">
+            <img src="http://pifa.yunmayi.com/statics/images/index/0502.jpg"/>
+        </div>
+    </div>
+</div>
+<!--页脚-->
+<div id="footer">
+    <div class="wrapper">
+        <div class="footer-info">
+            <p class="footer-tel">加盟咨询热线：<b>400-069-2666</b></p>
+            <p class="footer-link">
+                <a href="">批发平台</a>
+                <a href="">零售商城</a>
+                <a href="">蚂蚁小店</a>
+                <a href="">区域加盟</a>
+                <a href="">供应商合作</a>
+            </p>
+            <p class="footer-add">公司地址：浙江省杭州市拱墅区祥符街道祥园路108号中国智慧信息产业园3期G座2号楼5楼</p>
+            <p class="footer-copy">Copyright&#169;2014-2017版权归浙江云之涞网络科技有限公司所有<span>网站备案/许可证号：湘ICP备14000706号-1</span></p>
+        </div>
+        <div class="footer-login">
+            <a href=""><img src="http://www.yunmayi.com/image/app.png"/><p>云蚂蚁app</p></a>
+            <a href=""><img src="http://www.yunmayi.com/image/weixin.jpg"/><p>微信公众号</p></a>
+        </div>
+    </div>
+</div>
+<!--侧栏-->
+<div id="scrollTop" v-show="goTopShow" >
+    <ul>
+        <li class="scr-li"><a href="#special" class="iconfont">限时特价<i>&#xe600;</i></a></li>
+        <li class="scr-li"><a href="#c1" class="iconfont">酒水饮料<i>&#xe600;</i></a></li>
+        <li class="scr-li"><a href="#c2" class="iconfont">食品零食<i>&#xe600;</i></a></li>
+        <li class="scr-li"><a href="#c3" class="iconfont">粮油调味<i>&#xe600;</i></a></li>
+        <li class="scr-li"><a href="#c4" class="iconfont">日用洗护<i>&#xe600;</i></a></li>
+        <li class="scr-li"><a href="#c5" class="iconfont">家用百货<i>&#xe600;</i></a></li>
+        <li class="scr-li"><a href="#c6" class="iconfont">冰淇淋<i>&#xe600;</i></a></li>
+        <li class="scr-li"><a href="#c7" class="iconfont">速冻食品<i>&#xe600;</i></a></li>
+        <li class="scr-li"><a href="#c8" class="iconfont">尾品汇<i>&#xe600;</i></a></li>
+        <li class="scr-li"><a href="#c9" class="iconfont">特价区<i>&#xe600;</i></a></li>
+        <li class="scr-li toTop" @click="backTop"><a href="#" class="iconfont">返回顶部<i>&#xe62d;</i></a></li>
+    </ul>
+</div>
+</body>
+</html>
